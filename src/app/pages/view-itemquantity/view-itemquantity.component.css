@@ -1,0 +1,52 @@
+.Header{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+  }
+.mat-column-warehouseId{
+    text-align: center;
+}
+.mat-column-warehouseName{
+    text-align: center;
+}
+.mat-column-areaName{
+    text-align: center;
+}
+.mat-column-cityName{
+    text-align: center;
+}
+.mat-column-countryName{
+    text-align: center;
+}
+.mat-column-inventoryId{
+    text-align: center;
+}
+.mat-column-itemSize{
+    text-align: center;
+}
+.mat-column-inStock{
+    text-align: center;
+}
+.mat-column-avlQty{
+    text-align: center;
+}
+.mat-column-itemName{
+    text-align: center;
+}
+.mat-column-itemId{
+    text-align: center;
+}
+.mat-column-itemType{
+    text-align: center;
+}
+.mat-column-productType{
+    text-align: center;
+}
+.mat-column-brandName{
+    text-align: center;
+}
+
+
+
