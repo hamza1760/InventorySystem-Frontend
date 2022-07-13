@@ -8,7 +8,8 @@ export class ItemQuantityService {
 
   constructor(private http: HttpClient) { }
 
-  public getitemQuantity(){
+  public getItemQuantity(){
     return this.http.get('http://localhost:8181/itemsinwarehouse/');
   }
+
 }

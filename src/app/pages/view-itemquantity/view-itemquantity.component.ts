@@ -9,23 +9,25 @@ import Swal from 'sweetalert2';
   styleUrls: ['./view-itemquantity.component.css']
 })
 export class ViewItemquantityComponent implements OnInit {
-  getItemQuantity:any=[]
-  displayedColumns: any = ['warehouseId', 'warehouseName','areaName','cityName','countryName','inventoryId','itemSize','inStock','avlQty','itemName','itemId','itemType','productType','brandName'];
+  getItemQuantity: any = []
+  displayedColumns: any = ['warehouseId', 'warehouseName', 'areaName', 'cityName', 'countryName', 'inventoryId', 'itemSize', 'inStock', 'avlQty', 'itemName', 'itemId', 'itemType', 'productType', 'brandName'];
 
 
   constructor(private itemQuantity: ItemQuantityService) { }
 
   ngOnInit(): void {
-    this.itemQuantity.getitemQuantity().subscribe((data:any)=>{
+    this.itemQuantity.getItemQuantity().subscribe((data: any) => {
       this.getItemQuantity = data;
       console.log(this.getItemQuantity)
-    
-    },
-    (error)=>{
-      console.log(error)
-      Swal.fire('Item not found',error);
-    }
-    )
+
+    });
+  }
+  public clickable(): any {
+    this.itemQuantity.getItemQuantity().subscribe((data: any) => {
+      this.getItemQuantity = data;
+      console.log(this.getItemQuantity)
+
+    });
   }
 
 }

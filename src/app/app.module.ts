@@ -10,11 +10,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import{HttpClientModule} from  '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
+import { ItemQuantityButtonComponent } from './pages/item-quantity-button/item-quantity-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewItemquantityComponent
+    ViewItemquantityComponent,
+    ItemQuantityButtonComponent
   ],
   imports: [
     BrowserModule,
