@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import { ViewItemquantityComponent } from './pages/view-itemquantity/view-itemquantity.component';
+import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import{HttpClientModule} from  '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
-import { ItemQuantityButtonComponent } from './pages/item-quantity-button/item-quantity-button.component';
+import { ItemQuantityButtonComponent } from './components/item-quantity-button/item-quantity-button.component';
 
 @NgModule({
   declarations: [

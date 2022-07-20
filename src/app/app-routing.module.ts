@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ItemQuantityButtonComponent } from './pages/item-quantity-button/item-quantity-button.component';
-import { ViewItemquantityComponent } from './pages/view-itemquantity/view-itemquantity.component';
+import { ItemQuantityButtonComponent } from './components/item-quantity-button/item-quantity-button.component';
+import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
 
 const routes: Routes = [
   {
