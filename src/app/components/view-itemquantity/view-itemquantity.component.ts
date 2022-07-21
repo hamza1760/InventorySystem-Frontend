@@ -22,12 +22,4 @@ export class ViewItemquantityComponent implements OnInit {
 
     });
   }
-  public clickable(): any {
-    this.itemQuantity.getItemQuantity().subscribe((data: any) => {
-      this.getItemQuantity = data;
-      console.log(this.getItemQuantity)
-
-    });
-  }
-
 }
