@@ -1,7 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ItemQuantityButtonComponent } from './components/item-quantity-button/item-quantity-button.component';
+import { ButtonComponent } from './components/button/button.component';
+import { RegisterComponent } from './components/register/register.component';
 import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
+
+
 
 const routes: Routes = [
   {
@@ -11,9 +14,13 @@ const routes: Routes = [
   },
   {
     path: '',
-  component: ItemQuantityButtonComponent,
+  component: ButtonComponent,
   pathMatch: 'full'
-
+  },
+  {
+    path: 'signup',
+    component: RegisterComponent,
+    pathMatch: 'full'
   }
   
 ];

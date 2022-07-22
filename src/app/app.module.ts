@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import{HttpClientModule} from  '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
-import { ItemQuantityButtonComponent } from './components/item-quantity-button/item-quantity-button.component';
-
+import { ButtonComponent } from './components/button/button.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
     ViewItemquantityComponent,
-    ItemQuantityButtonComponent
+    RegisterComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,9 @@ import { ItemQuantityButtonComponent } from './components/item-quantity-button/i
     MatCardModule,
     MatListModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
