@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { switchAll } from 'rxjs';
 import { ItemQuantityService } from 'src/app/services/item-quantity.service';
 
 @Component({

@@ -14,6 +14,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import{FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     HttpClientModule,
     MatTableModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
