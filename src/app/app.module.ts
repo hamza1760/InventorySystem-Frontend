@@ -9,7 +9,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import{HttpClientModule} from  '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
-import { ButtonComponent } from './components/button/button.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
 import {MatInputModule} from '@angular/material/input';
@@ -24,7 +23,6 @@ import { LoginComponent } from './components/login/login.component';
     AppComponent,
     ViewItemquantityComponent,
     RegisterComponent,
-    ButtonComponent,
     NavbarComponent,
     LoginComponent
   ],
