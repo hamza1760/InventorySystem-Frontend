@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SignupService } from 'src/app/services/register.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +8,7 @@ import { SignupService } from 'src/app/services/register.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private signup:SignupService) { }
+  constructor(private userService : UserService) { }
 
   public User = {
     username: '',
@@ -22,8 +22,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  formSubmit(){
-        this.signup.addUser(this.User).subscribe(
+  signUp(){
+        this.userService.signup(this.User).subscribe(
           (data)=>{
             alert("success");
           }

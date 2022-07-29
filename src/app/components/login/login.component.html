@@ -3,16 +3,18 @@
     <div class="row">
     <div class="col-md-6 offset-md-3">
     <h1 class="text-center mt10">Login Here</h1>
-    <form class="text-center" >
+    <form (submit)="logIn()" class="text-center" >
 <mat-form-field class = "full-width" appearance="outline">
     <mat-label>Username</mat-label>
     <input  
+    [(ngModel)] ="loginData.username"
     name ="username"
     matInput placeholder="Placeholder">
   </mat-form-field>
   <mat-form-field class = "full-width" appearance="outline">
     <mat-label>password</mat-label>
-    <input type ="password"
+    <input [(ngModel)] = "loginData.password"
+    type ="password"
     name ="password" matInput placeholder="Placeholder">
   </mat-form-field>
   <div class="container text-center"> 

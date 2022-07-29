@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
 
@@ -21,8 +22,13 @@ const routes: Routes = [
   path: 'login',
   component: LoginComponent,
   pathMatch: 'full'
+  },
+  {
+    path: 'welcome',
+    component: WelcomeComponent,
+    pathMatch: 'full'
   }
-  
+
 ];
 
 @NgModule({

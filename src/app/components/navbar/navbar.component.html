@@ -1,16 +1,32 @@
 <mat-toolbar color="primary">
     <button routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
+      <mat-icon >home</mat-icon>
     </button>
     <span>Inventory System</span>
     <span class="example-spacer"></span>
-    <button routerLink="/login" mat-icon-button class="example-icon mr10" aria-label="Example icon-button with heart icon">
-      login 
+    <button *ngIf = "!userService.isLoggedIn()"
+    routerLink="/login" mat-icon-button class="example-icon mr10" aria-label="Example icon-button with heart icon"  >
+      <mat-icon>login</mat-icon>
     </button>
-    <button routerLink="/signup" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      signup
+    <button *ngIf = "!userService.isLoggedIn()"
+    routerLink="/signup" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>how_to_reg</mat-icon>
     </button>
+    <!-- <button *ngIf = "userService.isLoggedIn()"
+    routerLink="/login" mat-icon-button class="example-icon mr40" aria-label="Example icon-button with share icon">
+    
+    </button> -->
+    <div class ="style" *ngIf = "userService.isLoggedIn()" >
+    <p class ="style">{{userService.getUser().username}}</p>
+    <button 
+    (click)="userService.logout()" 
+    routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+    
 </mat-toolbar>
-<mat-action-list>
-  <button routerLink="/itemquantity" mat-list-item> Item Quantity </button>
+<mat-action-list >
+  <button *ngIf = "userService.isLoggedIn()"
+  routerLink="/itemquantity" mat-list-item>  Item Quantity </button>
 </mat-action-list>
