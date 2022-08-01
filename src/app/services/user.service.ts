@@ -53,24 +53,22 @@ export class UserService {
 
    //setting user in local storage
    public setUser(user:any){
-    localStorage.setItem("user",JSON.stringify(user));
+     let info = {username: user.username, role: user.authorities[0].authority};
+    localStorage.setItem("user",JSON.stringify(info));
    }
    //getting user from local storage
    public getUser(){
      let user =localStorage.getItem("user");
      if(user!=null){
        return JSON.parse(user);
-     } 
+     }
      return null;
    }
 
    //getting user role
    public getRole(){
-     let user = this.getUser();
-    user.authorities[0].authority;
+    let user = this.getUser();
+    user.role;
 
-   }
-
-
-
+}
 }

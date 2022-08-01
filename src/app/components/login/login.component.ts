@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(private userService: UserService,private router:Router) {}
 
   ngOnInit(): void {}
+
   logIn() {
     this.userService.login(this.loginData).subscribe(
       (data: any) => {
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
             console.log(user);
             this.userService.setUser(user);
             this.router.navigate(["welcome"]);
+            
 
           }
         )
