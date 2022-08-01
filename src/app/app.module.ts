@@ -19,7 +19,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
-import { WelcomeComponent } from './components/welcome/welcome.component';
+import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AddItemComponent } from './components/add-item/add-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     RegisterComponent,
     NavbarComponent,
     LoginComponent,
-    WelcomeComponent
+    UserDashboardComponent,
+    AdminDashboardComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,

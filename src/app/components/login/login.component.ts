@@ -29,11 +29,16 @@ export class LoginComponent implements OnInit {
         this.userService.saveToken(data.token);
         this.userService.getCurrentUser().subscribe(
           (user: any) => {
-            console.log(user);
             this.userService.setUser(user);
-            this.router.navigate(["welcome"]);
-            
+            if(this.userService.getRole()=="ROLE_ADMIN"){
+              this.router.navigate(['admin']);
+          }
+          else{
+          this.router.navigate(['user']);
+          }
 
+          
+              
           }
         )
         

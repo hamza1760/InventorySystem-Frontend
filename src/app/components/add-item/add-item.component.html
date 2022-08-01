@@ -1,0 +1,38 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+    <h1 class="text-center mt10">Add Item</h1>
+    <form (submit)="addItem()"
+    class="text-center" >
+<mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Item Id</mat-label>
+    <input [(ngModel)]="Item.itemId"
+    name = "itemId"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Item Name</mat-label>
+    <input [(ngModel)]="Item.itemName"
+    name = "itemName" 
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Product Type Id</mat-label>
+    <input  [(ngModel)]="Item.productType.productTypeId"
+    name = "productTypeId"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Brand Id</mat-label>
+    <input  [(ngModel)]="Item.brand.brandId"
+    name = "brandId"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <div class="container text-center"> 
+    <button type = "submit"  mat-raised-button color ="primary">Add</button>
+</div>
+</form>
+</div>
+</div>
+</div>

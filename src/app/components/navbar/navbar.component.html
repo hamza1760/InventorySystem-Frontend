@@ -27,3 +27,8 @@
   <button *ngIf = "userService.isLoggedIn()"
   routerLink="/itemquantity" mat-list-item>  Item Quantity </button>
 </mat-action-list>
+<mat-action-list >
+  <button *ngIf = "userService.isLoggedIn()&&userService.getRole()=='ROLE_ADMIN'"
+  
+  routerLink="/admin/addItem" mat-list-item>  Add Item </button>
+</mat-action-list>

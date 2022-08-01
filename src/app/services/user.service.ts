@@ -68,7 +68,7 @@ export class UserService {
    //getting user role
    public getRole(){
     let user = this.getUser();
-    user.role;
+    return user.role;
 
 }
 }
