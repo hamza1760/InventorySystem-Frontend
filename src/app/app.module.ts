@@ -19,9 +19,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
-import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
-import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
+import { AddWarehouseComponent } from './components/add-warehouse/add-warehouse.component';
+import { AddInventoryComponent } from './components/add-inventory/add-inventory.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +31,11 @@ import { AddItemComponent } from './components/add-item/add-item.component';
     RegisterComponent,
     NavbarComponent,
     LoginComponent,
-    UserDashboardComponent,
-    AdminDashboardComponent,
-    AddItemComponent
+    AddItemComponent,
+    AddWarehouseComponent,
+    AddInventoryComponent,
+    SidebarComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { AddItemComponent } from './components/add-item/add-item.component';
     MatFormFieldModule,
     FormsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

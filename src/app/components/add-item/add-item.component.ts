@@ -27,13 +27,12 @@ export class AddItemComponent implements OnInit {
 
   public addItem(){
     this.adminService.addItem(this.Item).subscribe(
-      (
         (data:any)=>{
-          alert("success")
+          alert("Success")
           console.log(data);
         }
+        
       )
-    )
   }
 
 

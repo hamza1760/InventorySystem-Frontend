@@ -1,10 +1,11 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddInventoryComponent } from './components/add-inventory/add-inventory.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
-import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AddWarehouseComponent } from './components/add-warehouse/add-warehouse.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
 
 
@@ -26,18 +27,20 @@ const routes: Routes = [
   pathMatch: 'full'
   },
   {
-    path: 'admin',
-    component: AdminDashboardComponent,
-    children:[
-      {
         path: 'addItem',
         component: AddItemComponent
-      }
-    ]
-  },
+      },
+      {
+        path: 'addWarehouse',
+        component: AddWarehouseComponent
+      },
+      {
+        path: 'addInventory',
+        component: AddInventoryComponent
+      },
   {
-    path: 'user',
-    component: UserDashboardComponent,
+    path: 'welcome',
+    component: DashboardComponent,
     pathMatch: 'full'
   }
 
