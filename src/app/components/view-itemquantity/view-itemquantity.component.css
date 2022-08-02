@@ -25,9 +25,11 @@ table {
 }
 .mat-column-inStock{
     text-align: center;
+    color: blue;
 }
 .mat-column-avlQty{
     text-align: center;
+    color: blue;
 }
 .mat-column-itemName{
     text-align: center;

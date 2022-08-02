@@ -28,9 +28,8 @@ export class ViewItemquantityComponent implements OnInit {
   constructor(private itemQuantityService: ItemQuantityService) { }
 
   ngOnInit(): void {
-    this.itemQuantity.getItemQuantity().subscribe((data: any) => {
+    this.itemQuantityService.getItemQuantity().subscribe((data: any) => {
       this.itemQuantity = data;
-      console.log(this.itemQuantity)
 
     });
   }
