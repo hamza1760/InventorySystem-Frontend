@@ -13,7 +13,6 @@ export class AddInventoryComponent implements OnInit {
   ngOnInit(): void {
   }
   Inventory ={
-    inventoryId: '',
     itemSize: '',
     inStock: '',
     avlQty: '',

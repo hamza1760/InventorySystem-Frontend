@@ -11,7 +11,6 @@ export class AddWarehouseComponent implements OnInit {
   constructor(private adminService : AdminService) { }
 
   Warehouse ={
-    warehouseId: '',
     warehouseName : '',
     address:{
       addressId: ''

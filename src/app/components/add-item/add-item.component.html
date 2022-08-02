@@ -5,12 +5,6 @@
     <h1 class="text-center mt10">Add Item</h1>
     <form (submit)="addItem()"
     class="text-center" >
-<mat-form-field class = "full-width" appearance="outline">
-    <mat-label>Item Id</mat-label>
-    <input [(ngModel)]="Item.itemId"
-    name = "itemId"
-    matInput placeholder="Placeholder">
-  </mat-form-field>
   <mat-form-field class = "full-width" appearance="outline">
     <mat-label>Item Name</mat-label>
     <input [(ngModel)]="Item.itemName"

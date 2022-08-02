@@ -11,7 +11,6 @@ export class AddItemComponent implements OnInit {
   constructor(private adminService: AdminService) { }
 
   Item={
-    itemId: '',
     itemName: '',
     productType:{
       productTypeId: ''
