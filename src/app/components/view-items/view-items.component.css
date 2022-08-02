@@ -1,0 +1,21 @@
+
+
+table {
+  width: 100%;
+}
+
+.mat-column-itemId {
+  text-align: center;
+}
+.mat-column-itemName {
+    text-align: center;
+  }
+  .mat-column-productType {
+    text-align: center;
+  }
+  .mat-column-brandName {
+    text-align: center;
+  }
+
+
+

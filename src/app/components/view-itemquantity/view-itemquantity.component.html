@@ -3,65 +3,61 @@
 <div class="bootstrap-wrapper">
   <div class="container text-center">
   <h1>ItemQuantity</h1>
-  <table mat-table [dataSource]="getItemQuantity" class="mat-elevation-z8 text">
+  <table mat-table [dataSource]="itemQuantity" class="mat-elevation-z8 text">
 
     <ng-container matColumnDef="warehouseId">
-      <th mat-header-cell *matHeaderCellDef> warehouseId</th>
+      <th mat-header-cell *matHeaderCellDef> Warehouse Id</th>
       <td mat-cell *matCellDef="let element"> {{element.warehouseId}} </td>
     </ng-container>
     <ng-container matColumnDef="warehouseName">
-      <th mat-header-cell *matHeaderCellDef> warehouseName </th>
+      <th mat-header-cell *matHeaderCellDef> warehouse Name </th>
       <td mat-cell *matCellDef="let element"> {{element.warehouseName}} </td>
     </ng-container>
 
     <ng-container matColumnDef="areaName">
-      <th mat-header-cell *matHeaderCellDef> areaName </th>
+      <th mat-header-cell *matHeaderCellDef> Area Name </th>
       <td mat-cell *matCellDef="let element"> {{element.areaName}} </td>
     </ng-container>
 
     <ng-container matColumnDef="cityName">
-      <th mat-header-cell *matHeaderCellDef> cityName </th>
+      <th mat-header-cell *matHeaderCellDef> City Name </th>
       <td mat-cell *matCellDef="let element"> {{element.cityName}} </td>
     </ng-container>
 
     <ng-container matColumnDef="countryName">
-      <th mat-header-cell *matHeaderCellDef> countryName </th>
+      <th mat-header-cell *matHeaderCellDef> Country Name </th>
       <td mat-cell *matCellDef="let element"> {{element.countryName}} </td>
     </ng-container>
     <ng-container matColumnDef="inventoryId">
-      <th mat-header-cell *matHeaderCellDef> inventoryId </th>
+      <th mat-header-cell *matHeaderCellDef> Inventory Id </th>
       <td mat-cell *matCellDef="let element"> {{element.inventoryId}} </td>
     </ng-container>
     <ng-container matColumnDef="itemSize">
-      <th mat-header-cell *matHeaderCellDef> itemSize </th>
+      <th mat-header-cell *matHeaderCellDef> Item Size </th>
       <td mat-cell *matCellDef="let element"> {{element.itemSize}} </td>
     </ng-container>
     <ng-container matColumnDef="inStock">
-      <th mat-header-cell *matHeaderCellDef> inStock </th>
+      <th mat-header-cell *matHeaderCellDef> In Stock </th>
       <td mat-cell *matCellDef="let element"> {{element.inStock}} </td>
     </ng-container>
     <ng-container matColumnDef="avlQty">
-      <th mat-header-cell *matHeaderCellDef> avlQty </th>
+      <th mat-header-cell *matHeaderCellDef> Avl Qty </th>
       <td mat-cell *matCellDef="let element"> {{element.avlQty}} </td>
     </ng-container>
     <ng-container matColumnDef="itemName">
-      <th mat-header-cell *matHeaderCellDef> itemName </th>
+      <th mat-header-cell *matHeaderCellDef> Item Name </th>
       <td mat-cell *matCellDef="let element"> {{element.itemName}} </td>
     </ng-container>
-    <ng-container matColumnDef="itemId">
-      <th mat-header-cell *matHeaderCellDef> itemId </th>
-      <td mat-cell *matCellDef="let element"> {{element.itemId}} </td>
-    </ng-container>
     <ng-container matColumnDef="itemType">
-      <th mat-header-cell *matHeaderCellDef> itemType </th>
+      <th mat-header-cell *matHeaderCellDef> Item Type </th>
       <td mat-cell *matCellDef="let element"> {{element.itemType}} </td>
     </ng-container>
     <ng-container matColumnDef="productType">
-      <th mat-header-cell *matHeaderCellDef> productType </th>
+      <th mat-header-cell *matHeaderCellDef> Product Type </th>
       <td mat-cell *matCellDef="let element"> {{element.productType}} </td>
     </ng-container>
     <ng-container matColumnDef="brandName">
-      <th mat-header-cell *matHeaderCellDef> brandName </th>
+      <th mat-header-cell *matHeaderCellDef> Brand Name </th>
       <td mat-cell *matCellDef="let element"> {{element.brandName}} </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

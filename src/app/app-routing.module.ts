@@ -6,7 +6,10 @@ import { AddWarehouseComponent } from './components/add-warehouse/add-warehouse.
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ViewInventoryComponent } from './components/view-inventory/view-inventory.component';
 import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
+import { ViewItemsComponent } from './components/view-items/view-items.component';
+import { ViewWarehousesComponent } from './components/view-warehouses/view-warehouses.component';
 
 
 
@@ -45,6 +48,21 @@ const routes: Routes = [
   {
     path: 'home',
     component: DashboardComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'items',
+    component: ViewItemsComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'warehouses',
+    component: ViewWarehousesComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'inventories',
+    component: ViewInventoryComponent,
     pathMatch: 'full'
   }
 

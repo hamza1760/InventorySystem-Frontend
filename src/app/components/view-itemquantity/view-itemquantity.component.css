@@ -1,6 +1,3 @@
-.Header{
-    text-align: center;
-}
 
 table {
     width: 100%;
@@ -33,9 +30,6 @@ table {
     text-align: center;
 }
 .mat-column-itemName{
-    text-align: center;
-}
-.mat-column-itemId{
     text-align: center;
 }
 .mat-column-itemType{

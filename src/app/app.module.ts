@@ -24,6 +24,9 @@ import { AddWarehouseComponent } from './components/add-warehouse/add-warehouse.
 import { AddInventoryComponent } from './components/add-inventory/add-inventory.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ViewItemsComponent } from './components/view-items/view-items.component';
+import { ViewWarehousesComponent } from './components/view-warehouses/view-warehouses.component';
+import { ViewInventoryComponent } from './components/view-inventory/view-inventory.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +39,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AddInventoryComponent,
     SidebarComponent,
     DashboardComponent,
+    ViewItemsComponent,
+    ViewWarehousesComponent,
+    ViewInventoryComponent,
   ],
   imports: [
     BrowserModule,
