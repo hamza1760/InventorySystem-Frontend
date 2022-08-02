@@ -1,19 +1,19 @@
 <mat-card *ngIf="userService.isLoggedIn()">
     <mat-action-list>
         <button *ngIf="userService.isLoggedIn()&& userService.getRole()=='ROLE_ADMIN'" 
-        mat-list-item routerLink="/addItem">
+        mat-list-item routerLink="/item">
             Add Item
         </button>
         <button *ngIf="userService.isLoggedIn()&& userService.getRole()=='ROLE_ADMIN'"
-        mat-list-item routerLink="/addWarehouse">
+        mat-list-item routerLink="/warehouse">
             Add Warehouse
         </button>
         <button *ngIf="userService.isLoggedIn()&& userService.getRole()=='ROLE_ADMIN'" 
-        mat-list-item routerLink="/addInventory">
+        mat-list-item routerLink="/inventory">
             Add Inventory
         </button >
         <button 
-         mat-list-item routerLink="/itemquantity">
+         mat-list-item routerLink="/warehouse/item">
             Item Quantity
         </button>
     </mat-action-list>

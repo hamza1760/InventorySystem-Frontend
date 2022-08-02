@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         this.userService.getCurrentUser().subscribe(
           (user: any) => {
             this.userService.setUser(user); 
-            this.router.navigate(["welcome"]);
+            this.router.navigate(["home"]);
           }
         )
         

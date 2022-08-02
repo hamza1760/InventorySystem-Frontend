@@ -12,7 +12,11 @@ import { ViewItemquantityComponent } from './components/view-itemquantity/view-i
 
 const routes: Routes = [
   {
-    path: 'itemquantity',
+    path: '',
+    component: LoginComponent,
+  },
+  {
+    path: 'warehouse/item',
     component: ViewItemquantityComponent,
     pathMatch: 'full'
   },
@@ -27,19 +31,19 @@ const routes: Routes = [
   pathMatch: 'full'
   },
   {
-        path: 'addItem',
+        path: 'item',
         component: AddItemComponent
       },
       {
-        path: 'addWarehouse',
+        path: 'warehouse',
         component: AddWarehouseComponent
       },
       {
-        path: 'addInventory',
+        path: 'inventory',
         component: AddInventoryComponent
       },
   {
-    path: 'welcome',
+    path: 'home',
     component: DashboardComponent,
     pathMatch: 'full'
   }
