@@ -1,20 +1,47 @@
-import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AddInventoryComponent } from './components/add-inventory/add-inventory.component';
-import { AddItemComponent } from './components/add-item/add-item.component';
-import { AddWarehouseComponent } from './components/add-warehouse/add-warehouse.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ViewInventoryComponent } from './components/view-inventory/view-inventory.component';
-import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
-import { ViewItemsComponent } from './components/view-items/view-items.component';
-import { ViewWarehousesComponent } from './components/view-warehouses/view-warehouses.component';
+import {
+  Component,
+  NgModule
+} from '@angular/core';
+import {
+  RouterModule,
+  Routes
+} from '@angular/router';
+import {
+  AddInventoryComponent
+} from './components/add-inventory/add-inventory.component';
+import {
+  AddItemComponent
+} from './components/add-item/add-item.component';
+import {
+  AddWarehouseComponent
+} from './components/add-warehouse/add-warehouse.component';
+import {
+  DashboardComponent
+} from './components/dashboard/dashboard.component';
+import {
+  LoginComponent
+} from './components/login/login.component';
+import {
+  RegisterComponent
+} from './components/register/register.component';
+import {
+  ViewInventoryComponent
+} from './components/view-inventory/view-inventory.component';
+import {
+  ViewItemquantityComponent
+} from './components/view-itemquantity/view-itemquantity.component';
+import {
+  ViewItemsComponent
+} from './components/view-items/view-items.component';
+import {
+  ViewWarehousesComponent
+} from './components/view-warehouses/view-warehouses.component';
+import { AdminGuard } from './services/admin.guard';
+import { DashboardGuard } from './services/dashboard.guard';
 
 
 
-const routes: Routes = [
-  {
+const routes: Routes = [{
     path: '',
     component: LoginComponent,
   },
@@ -29,41 +56,51 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-  path: 'login',
-  component: LoginComponent,
-  pathMatch: 'full'
+    path: 'login',
+    component: LoginComponent,
+    pathMatch: 'full'
   },
   {
-        path: 'item',
-        component: AddItemComponent
-      },
-      {
-        path: 'warehouse',
-        component: AddWarehouseComponent
-      },
-      {
-        path: 'inventory',
-        component: AddInventoryComponent
-      },
+    path: 'item',
+    component: AddItemComponent,
+    pathMatch: 'full',
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'warehouse',
+    component: AddWarehouseComponent,
+    pathMatch: 'full',
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'inventory',
+    component: AddInventoryComponent,
+    pathMatch: 'full',
+    canActivate: [AdminGuard]
+  },
   {
     path: 'home',
     component: DashboardComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate: [DashboardGuard]
   },
   {
     path: 'items',
     component: ViewItemsComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate: [DashboardGuard]
   },
   {
     path: 'warehouses',
     component: ViewWarehousesComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate: [DashboardGuard]
   },
   {
     path: 'inventories',
     component: ViewInventoryComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate: [DashboardGuard]
   }
 
 ];
@@ -72,4 +109,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
