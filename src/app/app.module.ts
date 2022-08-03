@@ -27,6 +27,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewItemsComponent } from './components/view-items/view-items.component';
 import { ViewWarehousesComponent } from './components/view-warehouses/view-warehouses.component';
 import { ViewInventoryComponent } from './components/view-inventory/view-inventory.component';
+import { SetItemquantityComponent } from './components/set-itemquantity/set-itemquantity.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { ViewInventoryComponent } from './components/view-inventory/view-invento
     ViewItemsComponent,
     ViewWarehousesComponent,
     ViewInventoryComponent,
+    SetItemquantityComponent,
   ],
   imports: [
     BrowserModule,

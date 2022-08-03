@@ -24,6 +24,7 @@ import {
 import {
   RegisterComponent
 } from './components/register/register.component';
+import { SetItemquantityComponent } from './components/set-itemquantity/set-itemquantity.component';
 import {
   ViewInventoryComponent
 } from './components/view-inventory/view-inventory.component';
@@ -49,6 +50,12 @@ const routes: Routes = [{
     path: 'warehouse/item',
     component: ViewItemquantityComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'warehouse/:warehouseId/item/quantity/:inventoryId',
+    component: SetItemquantityComponent,
+    pathMatch: 'full',
+    canActivate: [AdminGuard]
   },
   {
     path: 'signup',

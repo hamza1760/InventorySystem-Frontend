@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { InventoryService } from 'src/app/services/inventory.service';
 import { ItemQuantityService } from 'src/app/services/item-quantity.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-view-itemquantity',
@@ -21,16 +24,22 @@ export class ViewItemquantityComponent implements OnInit {
   'itemName', 
   'itemType', 
   'productType', 
-  'brandName'
+  'brandName',
+  "update"
 ];
 
 
-  constructor(private itemQuantityService: ItemQuantityService) { }
+  constructor(private itemQuantityService: ItemQuantityService,public userService: UserService,private route: Router) { }
 
   ngOnInit(): void {
     this.itemQuantityService.getItemQuantity().subscribe((data: any) => {
       this.itemQuantity = data;
 
     });
+  }
+
+  public setItemQuantity(warehouseId:any,inventoryId:any){
+    this.route.navigate([`warehouse/${warehouseId}/item/quantity/${inventoryId}`])
+
   }
 }
