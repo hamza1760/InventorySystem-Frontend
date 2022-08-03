@@ -10,16 +10,16 @@ export class UserService {
 
   //registering user
   public signup(user:any){
-    return this.http.post("http://localhost:8080/signup",user);
+    return this.http.post(`http://localhost:8080/signup`,user);
   }
   //generating token
   public login(loginData:any){
-    return this.http.post("http://localhost:8080/generate-token",loginData)
+    return this.http.post(`http://localhost:8080/generate-token`,loginData)
   }
 
   //get logged in user
   public getCurrentUser(){
-    return this.http.get("http://localhost:8080/current-user");
+    return this.http.get(`http://localhost:8080/current-user`);
   }
   
 

@@ -21,7 +21,11 @@ export class LoginComponent implements OnInit {
 
   constructor(public userService: UserService,private router:Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(this.userService.isLoggedIn()){
+      this.router.navigate(['home']);
+    }
+  }
 
   logIn() {
     this.userService.login(this.loginData).subscribe(

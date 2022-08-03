@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InventoryService } from 'src/app/services/inventory.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-view-inventory',
@@ -8,7 +9,7 @@ import { InventoryService } from 'src/app/services/inventory.service';
 })
 export class ViewInventoryComponent implements OnInit {
 
-  inventory:any = []
+  inventories:any = []
   displayedColumns: any[] = [
   "inventoryId",
   "itemSize",
@@ -19,19 +20,29 @@ export class ViewInventoryComponent implements OnInit {
   "quantityPerBox",
   "reorderPoint",
   "itemName",
-  "itemType"
+  "itemType",
+  "delete"
 ];
 
-  constructor(private inventoryService:  InventoryService) { }
+  constructor(private inventoryService:  InventoryService,public userService:UserService) { }
 
 
 
   ngOnInit(): void {
     this.inventoryService.getAllInventory().subscribe(
       (data:any)=>{
-      this.inventory=data;
+      this.inventories=data;
     }
     )
   }
+  public deleteInventory(inventoryId:any){
+    this.inventoryService.deleteInventory(inventoryId).subscribe(
+      (data:any)=>{
+        this.inventories = this.inventories.filter((inventory:any)=>inventory.inventoryId!=inventoryId);
+        alert("inventory deleted");
+      }
+    )
+  }
+
 
 }

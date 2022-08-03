@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ItemService } from 'src/app/services/item.service';
+import { UserService } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-view-items',
@@ -8,20 +11,30 @@ import { ItemService } from 'src/app/services/item.service';
 })
 export class ViewItemsComponent implements OnInit {
 
-  item:any = []
+  items:any = []
   displayedColumns: any[] = [
   "itemId", 
   "itemName", 
   "productType",
-  "brandName"
+  "brandName",
+  "delete"
   ];
 
-  constructor(public itemService: ItemService) { }
+  constructor(public itemService: ItemService,public userService: UserService) { }
 
   ngOnInit(): void {
     this.itemService.getAllItems().subscribe(
       (data:any)=>{
-        this.item=data;
+        this.items=data;
+      }
+    )
+  }
+
+  public deleteItem(itemId:any){
+    this.itemService.deleteItem(itemId).subscribe(
+      (data:any)=>{
+        this.items = this.items.filter((item:any)=>item.itemId!=itemId);
+        alert("Item deleted");
       }
     )
   }
