@@ -15,7 +15,16 @@ export class WarehouseService {
     return this.http.delete(`http://localhost:8080/warehouse/${warehouseId}`)
   }
 
+  public placeInventoryInWarehouse(warehouseId:any,Inventory:any){
+    return this.http.put(`http://localhost:8080/warehouse/${warehouseId}/`,Inventory);
+  }
+
+  public getItemQuantity(){
+    return this.http.get(`http://localhost:8080/warehouse/item/quantity`);
+  }
+
   public setItemQuantity(warehouseId:any,Inventory:any){
     return this.http.put(`http://localhost:8080/warehouse/${warehouseId}/item/quantity`,Inventory);
   }
+
 }

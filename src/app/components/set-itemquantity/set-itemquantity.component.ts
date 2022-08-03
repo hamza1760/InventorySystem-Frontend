@@ -23,7 +23,7 @@ export class SetItemquantityComponent implements OnInit {
   constructor(private warehouseService: WarehouseService,private inventoryService:InventoryService,private route : ActivatedRoute) { }
 
   warehouseId=0;
-  inventoryId=0
+  inventoryId=0;
 
   ngOnInit(): void {
     this.warehouseId= this.route.snapshot.params['warehouseId'];

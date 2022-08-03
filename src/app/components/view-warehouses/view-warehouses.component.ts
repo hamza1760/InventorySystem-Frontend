@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { WarehouseService } from 'src/app/services/warehouse.service';
 
@@ -16,10 +17,12 @@ export class ViewWarehousesComponent implements OnInit {
   "areaName",
   "cityName",
   "countryName",
+  "addInventory",
   "delete"
+  
   ];
 
-  constructor(private warehouseService : WarehouseService,public userService:UserService) { }
+  constructor(private warehouseService : WarehouseService,public userService:UserService,public route: Router) { }
 
   ngOnInit(): void {
     this.warehouseService.getAllWarehouses().subscribe(
@@ -29,14 +32,21 @@ export class ViewWarehousesComponent implements OnInit {
       }
     )
   }
+
+  public placeInventory(warehouseId:any){
+    this.route.navigate([`/warehouse/${warehouseId}/place-inventory`])
+  }
+
   public deleteWarehouse(warehouseId:any){
     this.warehouseService.deleteWarehouse(warehouseId).subscribe(
       (data:any)=>{
         this.warehouses = this.warehouses.filter((warehouse:any)=>warehouse.warehouseId!=warehouseId);
-        alert("warehouse deleted");
+        alert("Warehouse deleted");
       }
     )
   }
+
+
   
 
 }

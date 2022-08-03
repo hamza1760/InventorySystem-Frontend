@@ -39,7 +39,7 @@ export class ViewInventoryComponent implements OnInit {
     this.inventoryService.deleteInventory(inventoryId).subscribe(
       (data:any)=>{
         this.inventories = this.inventories.filter((inventory:any)=>inventory.inventoryId!=inventoryId);
-        alert("inventory deleted");
+        alert("Inventory deleted");
       }
     )
   }

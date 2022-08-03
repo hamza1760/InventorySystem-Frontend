@@ -28,6 +28,7 @@ import { ViewItemsComponent } from './components/view-items/view-items.component
 import { ViewWarehousesComponent } from './components/view-warehouses/view-warehouses.component';
 import { ViewInventoryComponent } from './components/view-inventory/view-inventory.component';
 import { SetItemquantityComponent } from './components/set-itemquantity/set-itemquantity.component';
+import { PlaceInventoryInWarehouseComponent } from './components/place-inventory-in-warehouse/place-inventory-in-warehouse.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { SetItemquantityComponent } from './components/set-itemquantity/set-item
     ViewWarehousesComponent,
     ViewInventoryComponent,
     SetItemquantityComponent,
+    PlaceInventoryInWarehouseComponent,
   ],
   imports: [
     BrowserModule,

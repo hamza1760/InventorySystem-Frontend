@@ -21,6 +21,7 @@ import {
 import {
   LoginComponent
 } from './components/login/login.component';
+import { PlaceInventoryInWarehouseComponent } from './components/place-inventory-in-warehouse/place-inventory-in-warehouse.component';
 import {
   RegisterComponent
 } from './components/register/register.component';
@@ -47,7 +48,7 @@ const routes: Routes = [{
     component: LoginComponent,
   },
   {
-    path: 'warehouse/item',
+    path: 'warehouse/item/quantity',
     component: ViewItemquantityComponent,
     pathMatch: 'full'
   },
@@ -108,6 +109,12 @@ const routes: Routes = [{
     component: ViewInventoryComponent,
     pathMatch: 'full',
     canActivate: [DashboardGuard]
+  },
+  {
+    path: 'warehouse/:warehouseId/place-inventory',
+    component: PlaceInventoryInWarehouseComponent,
+    pathMatch: 'full',
+    canActivate: [AdminGuard]
   }
 
 ];

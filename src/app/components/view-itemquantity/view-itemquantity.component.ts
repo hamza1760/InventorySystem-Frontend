@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { InventoryService } from 'src/app/services/inventory.service';
-import { ItemQuantityService } from 'src/app/services/item-quantity.service';
 import { UserService } from 'src/app/services/user.service';
+import { WarehouseService } from 'src/app/services/warehouse.service';
 
 @Component({
   selector: 'app-view-itemquantity',
@@ -29,10 +28,10 @@ export class ViewItemquantityComponent implements OnInit {
 ];
 
 
-  constructor(private itemQuantityService: ItemQuantityService,public userService: UserService,private route: Router) { }
+  constructor(private warehouseService: WarehouseService,public userService: UserService,private route: Router) { }
 
   ngOnInit(): void {
-    this.itemQuantityService.getItemQuantity().subscribe((data: any) => {
+    this.warehouseService.getItemQuantity().subscribe((data: any) => {
       this.itemQuantity = data;
 
     });
