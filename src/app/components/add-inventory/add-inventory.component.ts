@@ -31,10 +31,10 @@ export class AddInventoryComponent implements OnInit {
 
   public addInventory(){
     this.adminService.addInventory(this.Inventory).subscribe({
-     next(data:any){
+     next:(data:any)=>{
       Swal.fire('Success','Inventory added','success');
      },
-     error(error:any){
+     error:(error:any)=>{
         alert(error.error.message);
      }
     }

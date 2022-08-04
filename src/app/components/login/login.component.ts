@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import {
   UserService
 } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -28,8 +29,8 @@ export class LoginComponent implements OnInit {
   }
 
   logIn() {
-    this.userService.login(this.loginData).subscribe(
-      (data: any) => {
+    this.userService.login(this.loginData).subscribe({
+      next:(data:any)=>{
         this.userService.saveToken(data.token);
         this.userService.getCurrentUser().subscribe(
           (user: any) => {
@@ -37,7 +38,10 @@ export class LoginComponent implements OnInit {
             this.router.navigate(["home"]);
           }
         )
-        
-      } );
+      },
+      error:(error:any)=>{
+        Swal.fire('Error',error.error,'error');
+      }
+    })
   }
 }

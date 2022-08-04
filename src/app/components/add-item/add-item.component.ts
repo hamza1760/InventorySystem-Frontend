@@ -27,10 +27,10 @@ export class AddItemComponent implements OnInit {
 
   public addItem(){
     this.adminService.addItem(this.Item).subscribe({
-      next(data:any){
+      next:(data:any)=>{
         Swal.fire('Success','Item added','success');
       },
-      error(error:any){
+      error:(error:any)=>{
          alert(error.error.message);
       }
      }

@@ -22,10 +22,11 @@ export class AddWarehouseComponent implements OnInit {
   }
   public addWarehouse(){
     this.adminService.addWarehouse(this.Warehouse).subscribe({
-      next(data:any){
+      next:(data:any)=>{
         Swal.fire('Success','Warehouse added','success');
+        
       },
-      error(error:any){
+      error:(error:any)=>{
          alert(error.error.message);
       }
      }
