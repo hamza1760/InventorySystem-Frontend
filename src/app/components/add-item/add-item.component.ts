@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/services/admin.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-item',
@@ -25,13 +26,15 @@ export class AddItemComponent implements OnInit {
   }
 
   public addItem(){
-    this.adminService.addItem(this.Item).subscribe(
-        (data:any)=>{
-          alert("Success")
-          console.log(data);
-        }
-        
-      )
+    this.adminService.addItem(this.Item).subscribe({
+      next(data:any){
+        Swal.fire('Success','Item added','success');
+      },
+      error(error:any){
+         alert(error.error.message);
+      }
+     }
+    )
   }
 
 

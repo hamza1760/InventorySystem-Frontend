@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WarehouseService } from 'src/app/services/warehouse.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-place-inventory-in-warehouse',
@@ -24,10 +25,15 @@ export class PlaceInventoryInWarehouseComponent implements OnInit {
   }
 
   public placeInventory(){
-    this.warehouseService.placeInventoryInWarehouse(this.warehouseId,this.inventory).subscribe(
-      (data:any)=>{
-        alert("Inventory placed in warehouse");
+    this.warehouseService.placeInventoryInWarehouse(this.warehouseId,this.inventory).subscribe({
+      next(data:any){
+        Swal.fire('Success','Inventory placed in warehouse','success');
+      },
+      error(error:any){
+         Swal.fire('Error',error.error.message +': '+ error.error.id,'error');
       }
+    }
+     
     )
   }
 

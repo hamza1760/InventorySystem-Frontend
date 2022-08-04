@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/services/admin.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-inventory',
@@ -29,11 +30,15 @@ export class AddInventoryComponent implements OnInit {
   }
 
   public addInventory(){
-    this.adminService.addInventory(this.Inventory).subscribe(
-      (data:any)=>{
-        alert("Success");
-        console.log(data);
-      }
+    this.adminService.addInventory(this.Inventory).subscribe({
+     next(data:any){
+      Swal.fire('Success','Inventory added','success');
+     },
+     error(error:any){
+        alert(error.error.message);
+     }
+    }
+
     )
   }
 
