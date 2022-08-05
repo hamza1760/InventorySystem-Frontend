@@ -9,14 +9,14 @@ export class WarehouseService {
   constructor(private http:  HttpClient) { }
 
   public getAllWarehouses(){
-    return this.http.get(`http://localhost:8080/warehouses`)
+    return this.http.get(`http://localhost:8080/warehouses`);
   }
   public deleteWarehouse(warehouseId:any){
-    return this.http.delete(`http://localhost:8080/warehouse/${warehouseId}`)
+    return this.http.delete(`http://localhost:8080/warehouse/${warehouseId}`);
   }
 
   public placeInventoryInWarehouse(warehouseId:any,Inventory:any){
-    return this.http.put(`http://localhost:8080/warehouse/${warehouseId}/`,Inventory);
+    return this.http.put(`http://localhost:8080/warehouse/${warehouseId}`,Inventory);
   }
 
   public getItemQuantity(){

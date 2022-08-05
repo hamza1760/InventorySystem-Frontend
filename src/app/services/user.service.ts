@@ -14,7 +14,7 @@ export class UserService {
   }
   //generating token
   public login(loginData:any){
-    return this.http.post(`http://localhost:8080/generate-token`,loginData)
+    return this.http.post(`http://localhost:8080/generate-token`,loginData);
   }
 
   //get logged in user

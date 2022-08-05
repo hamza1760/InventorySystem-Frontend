@@ -9,9 +9,9 @@ export class ItemService {
   constructor(private http: HttpClient) { }
 
   public getAllItems(){
-    return this.http.get(`http://localhost:8080/items`)
+    return this.http.get(`http://localhost:8080/items`);
   }
   public deleteItem(itemId:any){
-    return this.http.delete(`http://localhost:8080/item/${itemId}`)
+    return this.http.delete(`http://localhost:8080/item/${itemId}`);
   }
 }
