@@ -1,0 +1,27 @@
+
+<mat-toolbar color="primary">
+    <button *ngIf="userService.isLoggedIn()"
+    routerLink="/home" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon >home</mat-icon>
+    </button>
+    <span class ="style">Inventory System</span>
+    <span class="example-spacer"></span>
+    <button *ngIf = "!userService.isLoggedIn()"
+    routerLink="/login" mat-icon-button class="example-icon mr10" aria-label="Example icon-button with heart icon"  >
+      <mat-icon>login</mat-icon>
+    </button>
+    <button *ngIf = "!userService.isLoggedIn()"
+    routerLink="/signup" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>how_to_reg</mat-icon>
+    </button>
+    <div class ="style" *ngIf = "userService.isLoggedIn()" >
+    <p class ="style">{{userService.getUser().username}}</p>
+    <button 
+    (click)="userService.logout()" 
+    routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+    

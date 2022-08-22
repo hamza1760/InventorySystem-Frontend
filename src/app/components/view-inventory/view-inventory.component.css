@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+  }
+.mat-column-inventoryId{
+    text-align: center;
+}
+.mat-column-itemSize{
+    text-align: center;
+}
+.mat-column-inStock{
+    text-align: center;
+}
+.mat-column-avlQty{
+    text-align: center;
+}
+.mat-column-inTransit{
+    text-align: center;
+}
+.mat-column-minOrderQuantity{
+    text-align: center;
+}
+.mat-column-quantityPerBox{
+    text-align: center;
+}
+.mat-column-reorderPoint{
+    text-align: center;
+}
+.mat-column-itemName{
+    text-align: center;
+}
+.mat-column-itemType{
+    text-align: center;
+}

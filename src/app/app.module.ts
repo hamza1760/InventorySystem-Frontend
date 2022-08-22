@@ -5,18 +5,47 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
-import{HttpClientModule} from  '@angular/common/http';
+import{HttpClientModule, HTTP_INTERCEPTORS} from  '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
-import { ItemQuantityButtonComponent } from './components/item-quantity-button/item-quantity-button.component';
-
+import { RegisterComponent } from './components/register/register.component';
+import { ViewItemquantityComponent } from './components/view-itemquantity/view-itemquantity.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import{FormsModule} from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { AddItemComponent } from './components/add-item/add-item.component';
+import { AddWarehouseComponent } from './components/add-warehouse/add-warehouse.component';
+import { AddInventoryComponent } from './components/add-inventory/add-inventory.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ViewItemsComponent } from './components/view-items/view-items.component';
+import { ViewWarehousesComponent } from './components/view-warehouses/view-warehouses.component';
+import { ViewInventoryComponent } from './components/view-inventory/view-inventory.component';
+import { SetItemquantityComponent } from './components/set-itemquantity/set-itemquantity.component';
+import { PlaceInventoryInWarehouseComponent } from './components/place-inventory-in-warehouse/place-inventory-in-warehouse.component';
 @NgModule({
   declarations: [
     AppComponent,
     ViewItemquantityComponent,
-    ItemQuantityButtonComponent
+    RegisterComponent,
+    NavbarComponent,
+    LoginComponent,
+    AddItemComponent,
+    AddWarehouseComponent,
+    AddInventoryComponent,
+    SidebarComponent,
+    DashboardComponent,
+    ViewItemsComponent,
+    ViewWarehousesComponent,
+    ViewInventoryComponent,
+    SetItemquantityComponent,
+    PlaceInventoryInWarehouseComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,9 +55,18 @@ import { ItemQuantityButtonComponent } from './components/item-quantity-button/i
     MatCardModule,
     MatListModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

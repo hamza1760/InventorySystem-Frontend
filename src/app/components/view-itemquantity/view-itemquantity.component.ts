@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { switchAll } from 'rxjs';
-import { ItemQuantityService } from 'src/app/services/item-quantity.service';
-import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
+import { WarehouseService } from 'src/app/services/warehouse.service';
 
 @Component({
   selector: 'app-view-itemquantity',
@@ -9,17 +9,36 @@ import Swal from 'sweetalert2';
   styleUrls: ['./view-itemquantity.component.css']
 })
 export class ViewItemquantityComponent implements OnInit {
-  getItemQuantity: any = []
-  displayedColumns: any = ['warehouseId', 'warehouseName', 'areaName', 'cityName', 'countryName', 'inventoryId', 'itemSize', 'inStock', 'avlQty', 'itemName', 'itemId', 'itemType', 'productType', 'brandName'];
+  itemQuantity: any = []
+  displayedColumns: any = [
+  'warehouseId', 
+  'warehouseName', 
+  'areaName', 
+  'cityName', 
+  'countryName', 
+  'inventoryId', 
+  'itemSize', 
+  'inStock', 
+  'avlQty', 
+  'itemName', 
+  'itemType', 
+  'productType', 
+  'brandName',
+  "update"
+];
 
 
-  constructor(private itemQuantity: ItemQuantityService) { }
+  constructor(private warehouseService: WarehouseService,public userService: UserService,private route: Router) { }
 
   ngOnInit(): void {
-    this.itemQuantity.getItemQuantity().subscribe((data: any) => {
-      this.getItemQuantity = data;
-      console.log(this.getItemQuantity)
+    this.warehouseService.getItemQuantity().subscribe((data: any) => {
+      this.itemQuantity = data;
 
     });
+  }
+
+  public setItemQuantity(warehouseId:any,inventoryId:any){
+    this.route.navigate([`warehouse/${warehouseId}/item/quantity/${inventoryId}`])
+
   }
 }

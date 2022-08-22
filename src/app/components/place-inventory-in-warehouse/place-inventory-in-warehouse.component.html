@@ -1,0 +1,22 @@
+<div
+class="bootstrap-wrapper">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+    <h1 class="text-center mt10">Place Inventory In Warehouse</h1>
+    <form (submit)="placeInventory()" class="text-center" >
+<mat-form-field  appearance="outline">
+    <mat-label>Inventory Id</mat-label>
+    <input 
+    [(ngModel)] ="inventory.inventoryId"
+    name = "inventoryId"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <div class="container text-center"> 
+    <button type = "submit"  mat-raised-button color ="primary">Add</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>

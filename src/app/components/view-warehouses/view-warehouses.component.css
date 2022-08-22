@@ -1,0 +1,22 @@
+
+table {
+    width: 100%;
+  }
+  
+  .mat-column-warehouseId {
+    text-align: center;
+  }
+  .mat-column-warehouseName {
+    text-align: center;
+  }
+  .mat-column-areaName {
+    text-align: center;
+  }
+  .mat-column-cityName {
+    text-align: center;
+  }
+  .mat-column-countryName {
+    text-align: center;
+  }
+
+  

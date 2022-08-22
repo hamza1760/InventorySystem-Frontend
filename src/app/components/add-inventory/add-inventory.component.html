@@ -1,0 +1,69 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+    <h1 class="text-center mt10">Add Inventory</h1>
+    <form (submit)="addInventory()"
+    class="text-center" >
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Item Size</mat-label>
+    <input [(ngModel)]="Inventory.itemSize"
+    name = "itemSize"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>In Stock</mat-label>
+    <input [(ngModel)]="Inventory.inStock"
+    name = "inStock"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Available Quantity</mat-label>
+    <input [(ngModel)]="Inventory.avlQty"
+    name = "avlQty"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>In Transit</mat-label>
+    <input [(ngModel)]="Inventory.inTransit"
+    name = "inTransit"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Minimum Order Quantity</mat-label>
+    <input [(ngModel)]="Inventory.minOrderQuantity"
+    name = "minOrderQuantity"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Quantity Per Box</mat-label>
+    <input [(ngModel)]="Inventory.quantityPerBox"
+    name = "quantityPerBox"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Reorder Point</mat-label>
+    <input [(ngModel)]="Inventory.reorderPoint"
+    name = "reorderPoint"
+    matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field class = "full-width" appearance="outline">
+    <mat-label>Item Id</mat-label>
+    <input [(ngModel)]="Inventory.item.itemId"
+    name = "itemId"
+    matInput placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field class = "full-width" appearance="outline">
+        <mat-label>Item Type Id</mat-label>
+        <input [(ngModel)]="Inventory.itemType.itemTypeId"
+        name = "itemTypeId"
+        matInput placeholder="Placeholder">
+  </mat-form-field>
+  <div class="container text-center"> 
+    <button type = "submit"  mat-raised-button color ="primary">Add</button>
+</div>
+</form>
+</div>
+</div>
+</div>

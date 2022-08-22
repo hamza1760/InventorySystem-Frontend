@@ -1,6 +1,3 @@
-.Header{
-    text-align: center;
-}
 
 table {
     width: 100%;
@@ -28,14 +25,13 @@ table {
 }
 .mat-column-inStock{
     text-align: center;
+    color: blue;
 }
 .mat-column-avlQty{
     text-align: center;
+    color: blue;
 }
 .mat-column-itemName{
-    text-align: center;
-}
-.mat-column-itemId{
     text-align: center;
 }
 .mat-column-itemType{
